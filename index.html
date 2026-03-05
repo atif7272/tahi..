@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Tahira Bohio | A Celebration of Light</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Noto+Nastaliq+Urdu:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --sindhi-red: #8B2635;
+            --sindhi-gold: #D4AF37;
+            --sindhi-emerald: #0D7377;
+            --sindhi-sapphire: #1E3A5F;
+            --sindhi-cream: #F5F1E8;
+            --sindhi-terracotta: #C65D3B;
+            --islamic-teal: #2C5F5D;
+            --warm-white: #FFFBF5;
+            --shadow-deep: rgba(139, 38, 53, 0.15);
+        }
+
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background: var(--warm-white);
+            color: var(--sindhi-sapphire);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Geometric Pattern Background */
+        .pattern-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(13, 115, 119, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 40% 20%, rgba(139, 38, 53, 0.02) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .geometric-border {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 8px;
+            background: linear-gradient(90deg, 
+                var(--sindhi-red) 0%, 
+                var(--sindhi-gold) 25%, 
+                var(--sindhi-emerald) 50%, 
+                var(--sindhi-gold) 75%, 
+                var(--sindhi-red) 100%);
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(139, 38, 53, 0.2);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            position: relative;
+            margin-bottom: 60px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: -1;
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
+            50% { transform: translate(-50%, -50%) scale(1.1); opacity: 0.8; }
+        }
+
+        .islamic-frame {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 30px;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.6s ease;
+        }
+
+        .islamic-frame:hover {
+            transform: rotate(45deg);
+        }
+
+        .islamic-frame svg {
+            width: 100%;
+            height: 100%;
+            fill: none;
+            stroke: var(--sindhi-gold);
+            stroke-width: 1.5;
+        }
+
+        .star-inner {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60%;
+            height: 60%;
+            fill: var(--sindhi-emerald);
+            opacity: 0;
+            transition: opacity 0.6s ease;
+        }
+
+        .islamic-frame:hover .star-inner {
+            opacity: 1;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 600;
+            color: var(--sindhi-red);
+            margin-bottom: 10px;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            color: var(--sindhi-emerald);
+            font-style: italic;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeInUp 1s ease forwards 0.5s;
+        }
+
+        .date-display {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            color: var(--sindhi-terracotta);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-top: 20px;
+            opacity: 0;
+            animation: fadeInUp 1s ease forwards 0.8s;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+        }
+
+        /* Content Cards */
+        .content-section {
+            background: rgba(255, 251, 245, 0.9);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 4px;
+            padding: 50px;
+            margin-bottom: 40px;
+            position: relative;
+            box-shadow: 0 10px 40px var(--shadow-deep);
+            backdrop-filter: blur(10px);
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .content-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .content-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--sindhi-gold), var(--sindhi-emerald), var(--sindhi-gold));
+            opacity: 0.6;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--sindhi-sapphire);
+            margin-bottom: 25px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background: var(--sindhi-gold);
+            transition: width 0.6s ease;
+        }
+
+        .content-section:hover .section-title::after {
+            width: 100%;
+        }
+
+        .message-text {
+            font-size: 1.25rem;
+            line-height: 1.9;
+            color: var(--sindhi-sapphire);
+            text-align: justify;
+            hyphens: auto;
+        }
+
+        .highlight {
+            color: var(--sindhi-red);
+            font-weight: 600;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .highlight:hover {
+            color: var(--sindhi-emerald);
+        }
+
+        /* Hidden Message Tooltip */
+        .hidden-message {
+            position: fixed;
+            background: var(--sindhi-sapphire);
+            color: var(--warm-white);
+            padding: 15px 20px;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            max-width: 280px;
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            font-family: 'Cormorant Garamond', serif;
+            line-height: 1.5;
+        }
+
+        .hidden-message.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .hidden-message::before {
+            content: '✦';
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            color: var(--sindhi-gold);
+            font-size: 1.2rem;
+        }
+
+        /* Quranic Verse Section */
+        .verse-section {
+            background: linear-gradient(135deg, rgba(13, 115, 119, 0.05) 0%, rgba(212, 175, 55, 0.05) 100%);
+            border-left: 4px solid var(--sindhi-emerald);
+            padding: 40px;
+            margin: 40px 0;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.4s ease;
+        }
+
+        .verse-section:hover {
+            background: linear-gradient(135deg, rgba(13, 115, 119, 0.1) 0%, rgba(212, 175, 55, 0.1) 100%);
+            transform: translateX(5px);
+        }
+
+        .verse-arabic {
+            font-family: 'Noto Nastaliq Urdu', serif;
+            font-size: 1.8rem;
+            color: var(--sindhi-emerald);
+            text-align: center;
+            margin-bottom: 20px;
+            line-height: 2;
+            direction: rtl;
+        }
+
+        .verse-translation {
+            font-style: italic;
+            color: var(--sindhi-sapphire);
+            text-align: center;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .verse-reference {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: var(--sindhi-terracotta);
+            font-weight: 600;
+        }
+
+        .hidden-blessing {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.6s ease;
+            margin-top: 20px;
+            text-align: center;
+            color: var(--sindhi-red);
+            font-style: italic;
+        }
+
+        .verse-section.revealed .hidden-blessing {
+            max-height: 100px;
+        }
+
+        /* Interactive Memory Cards */
+        .memory-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .memory-card {
+            background: var(--warm-white);
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            padding: 30px;
+            text-align: center;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            overflow: hidden;
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .memory-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--sindhi-red) 0%, var(--sindhi-terracotta) 100%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: 0;
+        }
+
+        .memory-card:hover::before {
+            opacity: 0.95;
+        }
+
+        .memory-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--sindhi-gold);
+            transition: all 0.4s ease;
+            z-index: 1;
+            position: relative;
+        }
+
+        .memory-card:hover .memory-icon {
+            color: var(--warm-white);
+            transform: scale(1.2);
+        }
+
+        .memory-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: var(--sindhi-sapphire);
+            margin-bottom: 10px;
+            transition: color 0.4s ease;
+            z-index: 1;
+            position: relative;
+        }
+
+        .memory-card:hover .memory-title {
+            color: var(--warm-white);
+        }
+
+        .memory-preview {
+            font-size: 0.95rem;
+            color: var(--sindhi-terracotta);
+            font-style: italic;
+            z-index: 1;
+            position: relative;
+            transition: color 0.4s ease;
+        }
+
+        .memory-card:hover .memory-preview {
+            color: rgba(255, 251, 245, 0.9);
+        }
+
+        .memory-full {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            color: var(--warm-white);
+            font-size: 1rem;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: 2;
+            padding: 20px;
+            line-height: 1.6;
+            pointer-events: none;
+        }
+
+        .memory-card.revealed .memory-full {
+            opacity: 1;
+        }
+
+        .memory-card.revealed .memory-icon,
+        .memory-card.revealed .memory-title,
+        .memory-card.revealed .memory-preview {
+            opacity: 0;
+        }
+
+        /* Sindhi Pattern Decoration */
+        .sindhi-pattern {
+            width: 100%;
+            height: 60px;
+            margin: 40px 0;
+            background-image: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 10px,
+                rgba(212, 175, 55, 0.1) 10px,
+                rgba(212, 175, 55, 0.1) 20px
+            );
+            position: relative;
+            overflow: hidden;
+        }
+
+        .sindhi-pattern::before,
+        .sindhi-pattern::after {
+            content: '◆';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--sindhi-gold);
+            font-size: 1.5rem;
+            opacity: 0.6;
+        }
+
+        .sindhi-pattern::before {
+            left: 20px;
+        }
+
+        .sindhi-pattern::after {
+            right: 20px;
+        }
+
+        /* Floating Elements Animation */
+        .floating-element {
+            position: fixed;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.4;
+            animation: float 20s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-30px) rotate(5deg); }
+        }
+
+        .float-1 { top: 20%; left: 5%; animation-delay: 0s; color: var(--sindhi-gold); font-size: 2rem; }
+        .float-2 { top: 60%; right: 5%; animation-delay: 5s; color: var(--sindhi-emerald); font-size: 1.5rem; }
+        .float-3 { bottom: 20%; left: 10%; animation-delay: 10s; color: var(--sindhi-red); font-size: 1.8rem; }
+
+        /* Signature Section */
+        .signature-section {
+            text-align: center;
+            margin-top: 60px;
+            padding: 40px;
+            position: relative;
+        }
+
+        .signature-line {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--sindhi-sapphire);
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .heart-container {
+            display: inline-block;
+            cursor: pointer;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .heart-container:hover {
+            transform: scale(1.1);
+        }
+
+        .heart {
+            color: var(--sindhi-red);
+            font-size: 3rem;
+            display: inline-block;
+            animation: heartbeat 2s infinite;
+            transition: all 0.3s ease;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            10% { transform: scale(1.1); }
+            20% { transform: scale(1); }
+            30% { transform: scale(1.1); }
+            40% { transform: scale(1); }
+        }
+
+        .heart-container.clicked .heart {
+            animation: explode 0.6s ease forwards;
+        }
+
+        @keyframes explode {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.5); color: var(--sindhi-gold); }
+            100% { transform: scale(1); color: var(--sindhi-red); }
+        }
+
+        .hidden-love {
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--sindhi-red);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            opacity: 0;
+            transition: all 0.4s ease;
+            pointer-events: none;
+        }
+
+        .heart-container.clicked .hidden-love {
+            opacity: 1;
+            top: -50px;
+        }
+
+        /* Confetti Canvas */
+        #confetti-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 999;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 15px;
+            }
+            
+            .content-section {
+                padding: 30px 20px;
+            }
+            
+            .memory-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .verse-arabic {
+                font-size: 1.4rem;
+            }
+        }
+
+        /* Loading Animation */
+        .page-loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--warm-white);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.8s ease, visibility 0.8s ease;
+        }
+
+        .page-loader.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loader-content {
+            text-align: center;
+        }
+
+        .loader-star {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            animation: spin 3s linear infinite;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .loader-text {
+            font-family: 'Playfair Display', serif;
+            color: var(--sindhi-red);
+            font-size: 1.2rem;
+            letter-spacing: 0.2em;
+        }
+
+        /* Special Date Badge */
+        .date-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--sindhi-gold), var(--sindhi-terracotta));
+            color: white;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            margin-top: 15px;
+            box-shadow: 0 4px 15px rgba(139, 38, 53, 0.2);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .date-badge:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(139, 38, 53, 0.3);
+        }
+
+        .date-badge::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .date-badge:hover::before {
+            left: 100%;
+        }
+
+        /* Secret Button */
+        .secret-trigger {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--sindhi-emerald);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(13, 115, 119, 0.3);
+            transition: all 0.3s ease;
+            z-index: 100;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .secret-trigger:hover {
+            transform: scale(1.1) rotate(15deg);
+            background: var(--sindhi-red);
+        }
+
+        .secret-message {
+            position: fixed;
+            bottom: 90px;
+            right: 30px;
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            max-width: 300px;
+            opacity: 0;
+            transform: translateY(20px) scale(0.9);
+            transition: all 0.4s ease;
+            pointer-events: none;
+            z-index: 99;
+            border: 2px solid var(--sindhi-gold);
+        }
+
+        .secret-message.visible {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            pointer-events: auto;
+        }
+
+        .secret-message h4 {
+            color: var(--sindhi-red);
+            margin-bottom: 10px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .secret-message p {
+            color: var(--sindhi-sapphire);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <!-- Page Loader -->
+    <div class="page-loader" id="loader">
+        <div class="loader-content">
+            <svg class="loader-star" viewBox="0 0 100 100">
+                <path d="M50 5 L61 35 L95 35 L68 57 L79 91 L50 70 L21 91 L32 57 L5 35 L39 35 Z" 
+                      fill="none" stroke="#8B2635" stroke-width="2"/>
+            </svg>
+            <div class="loader-text">Loading Blessings...</div>
+        </div>
+    </div>
+
+    <!-- Geometric Border -->
+    <div class="geometric-border"></div>
+    
+    <!-- Pattern Overlay -->
+    <div class="pattern-overlay"></div>
+
+    <!-- Floating Elements -->
+    <div class="floating-element float-1">✦</div>
+    <div class="floating-element float-2">❋</div>
+    <div class="floating-element float-3">✧</div>
+
+    <!-- Confetti Canvas -->
+    <canvas id="confetti-canvas"></canvas>
+
+    <!-- Hidden Message Tooltip -->
+    <div class="hidden-message" id="tooltip"></div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="islamic-frame" id="mainFrame" title="Click to reveal a blessing">
+                <svg viewBox="0 0 100 100">
+                    <path d="M50 5 L95 50 L50 95 L5 50 Z" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M50 20 L80 50 L50 80 L20 50 Z" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="50" cy="50" r="10" fill="#0D7377" class="star-inner"/>
+                </svg>
+            </div>
+            
+            <h1>Happy Birthday,<br>Tahira Bohio</h1>
+            <div class="subtitle">To my dearest Tahi — Light of our lives</div>
+            <div class="date-display">Celebrating on March 5, 2026</div>
+            <div class="date-badge" id="dateBadge" title="Click for Islamic date">12 Sha'ban 1447 AH</div>
+        </section>
+
+        <!-- Main Message -->
+        <section class="content-section" data-animate>
+            <h2 class="section-title">A Heartfelt Letter</h2>
+            <div class="message-text">
+                <p>
+                    My dear <span class="highlight" data-tooltip="Tahi means 'my sister' in Sindhi — a term of endearment that carries the weight of love, protection, and lifelong bond">Tahi</span>,
+                </p>
+                <p style="margin-top: 20px;">
+                    On this blessed day, I find myself reflecting on the profound gift that you are—not just to me, but to everyone fortunate enough to know your heart. You embody the rare combination of strength and gentleness, of wisdom and warmth, that the Prophet ﷺ described when he spoke of the <span class="highlight" data-tooltip="The Prophet Muhammad ﷺ said: 'The best of you are those who are best to their families' — and you exemplify this in every action">best of character</span>.
+                </p>
+                <p style="margin-top: 20px;">
+                    In Sindhi culture, we speak of <em>"achi and nek"</em>—the good and the noble. These words, though simple, carry centuries of meaning about a person whose heart is pure, whose intentions are sincere, and whose presence brings <span class="highlight" data-tooltip="Barakat means divine blessing and abundance that increases with time — your presence in our lives is exactly this">barakat</span> into every space you enter. Tahi, you are the living embodiment of these qualities.
+                </p>
+                <p style="margin-top: 20px;">
+                    Your kindness is not performative; it is the quiet, consistent type that shows up in the early morning messages checking on loved ones, in the patience you extend when others would falter, in the way you carry your faith with such graceful dignity. You remind me that true nobility lies in service, in compassion, and in unwavering integrity.
+                </p>
+            </div>
+        </section>
+
+        <div class="sindhi-pattern"></div>
+
+        <!-- Quranic Verse Section -->
+        <section class="verse-section" id="verseSection" title="Click to reveal hidden blessing">
+            <div class="verse-arabic">وَأَنْعِمْ نَعْمَتَكَ عَلَيَّ</div>
+            <div class="verse-translation">"And continue to bestow Your blessings upon me"</div>
+            <div class="verse-reference">— A prayer of gratitude and hope</div>
+            <div class="hidden-blessing">
+                May Allah continue to bless you with health, happiness, and the fulfillment of every righteous dream, my beloved sister.
+            </div>
+        </section>
+
+        <!-- Memories Section -->
+        <section class="content-section" data-animate>
+            <h2 class="section-title">Treasured Moments</h2>
+            <p class="message-text" style="margin-bottom: 30px; text-align: center;">
+                Hover over these memories to uncover the depth of our bond...
+            </p>
+            
+            <div class="memory-grid">
+                <div class="memory-card" data-memory="1">
+                    <div class="memory-icon">☪</div>
+                    <div class="memory-title">Shared Prayers</div>
+                    <div class="memory-preview">Those quiet moments...</div>
+                    <div class="memory-full">
+                        "Remember when we would stay up talking until Fajr, not just about life but about faith, dreams, and fears? Those conversations shaped my understanding of what sisterhood truly means. Your wisdom in those hours was my greatest teacher."
+                    </div>
+                </div>
+
+                <div class="memory-card" data-memory="2">
+                    <div class="memory-icon">🌙</div>
+                    <div class="memory-title">Eid Mornings</div>
+                    <div class="memory-preview">The joy of celebration...</div>
+                    <div class="memory-full">
+                        "Every Eid, you were the one who made sure everyone felt included, who remembered the small details that make celebrations meaningful. Your attention to the emotional needs of others is a rare gift that makes you irreplaceable."
+                    </div>
+                </div>
+
+                <div class="memory-card" data-memory="3">
+                    <div class="memory-icon">✿</div>
+                    <div class="memory-title">Quiet Strength</div>
+                    <div class="memory-preview">In difficult times...</div>
+                    <div class="memory-full">
+                        "I've watched you navigate challenges with a dignity that left me in awe. You never let circumstances diminish your light or your faith. That resilience taught me that true strength is gentle, patient, and rooted in trust in Allah."
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Closing Section -->
+        <section class="content-section" data-animate>
+            <h2 class="section-title">Prayers for Your Year Ahead</h2>
+            <div class="message-text">
+                <p>
+                    As you step into this new year of life, my prayers for you are simple but profound:
+                </p>
+                <p style="margin-top: 20px; padding-left: 20px; border-left: 3px solid var(--sindhi-gold);">
+                    May your <strong>imaan</strong> grow deeper with each passing day.<br>
+                    May your <strong>health</strong> be protected and strengthened.<br>
+                    May your <strong>dreams</strong> find clear paths to reality.<br>
+                    May your <strong>heart</strong> always know peace.<br>
+                    May you be surrounded by <strong>love</strong> that honors your worth.
+                </p>
+                <p style="margin-top: 20px;">
+                    You are not just my sister by bond, but my sister in faith, in struggle, in growth, and in hope. The world is better because you are in it, Tahi. Never forget your value, never dim your light, and never doubt how deeply you are cherished.
+                </p>
+            </div>
+        </section>
+
+        <!-- Signature -->
+        <div class="signature-section">
+            <div class="signature-line">With infinite love and gratitude,</div>
+            <div class="heart-container" id="heartContainer" title="Click me!">
+                <div class="hidden-love">You are deeply loved, always 💫</div>
+                <div class="heart">❤</div>
+            </div>
+            <p style="margin-top: 20px; color: var(--sindhi-terracotta); font-style: italic;">
+                Your sibling, always and forever
+            </p>
+        </div>
+    </div>
+
+    <!-- Secret Trigger -->
+    <div class="secret-trigger" id="secretTrigger" title="Click for a secret message">✦</div>
+    <div class="secret-message" id="secretMessage">
+        <h4>🌟 A Secret Blessing</h4>
+        <p>Tahi, some bonds transcend explanation. You are my answered prayer, my confidant, my reminder of Allah's mercy. In every prayer, your name is whispered with gratitude. Happy Birthday, my achi and nek sister. 🌙</p>
+    </div>
+
+    <script>
+        // Page Loader
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('loader').classList.add('hidden');
+                initConfetti();
+            }, 1500);
+        });
+
+        // Scroll Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('[data-animate]').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Tooltip System
+        const tooltip = document.getElementById('tooltip');
+        const highlights = document.querySelectorAll('.highlight[data-tooltip]');
+
+        highlights.forEach(highlight => {
+            highlight.addEventListener('mouseenter', (e) => {
+                tooltip.textContent = e.target.dataset.tooltip;
+                tooltip.classList.add('visible');
+                positionTooltip(e);
+            });
+
+            highlight.addEventListener('mousemove', positionTooltip);
+
+            highlight.addEventListener('mouseleave', () => {
+                tooltip.classList.remove('visible');
+            });
+        });
+
+        function positionTooltip(e) {
+            const x = e.clientX + 15;
+            const y = e.clientY + 15;
+            
+            // Prevent overflow
+            const rect = tooltip.getBoundingClientRect();
+            const finalX = x + rect.width > window.innerWidth ? x - rect.width - 30 : x;
+            const finalY = y + rect.height > window.innerHeight ? y - rect.height - 30 : y;
+            
+            tooltip.style.left = finalX + 'px';
+            tooltip.style.top = finalY + 'px';
+        }
+
+        // Islamic Frame Interaction
+        const mainFrame = document.getElementById('mainFrame');
+        let frameRotation = 0;
+        
+        mainFrame.addEventListener('click', () => {
+            frameRotation += 360;
+            mainFrame.style.transform = `rotate(${frameRotation}deg)`;
+            
+            // Create burst of light effect
+            const burst = document.createElement('div');
+            burst.style.cssText = `
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 10px;
+                height: 10px;
+                background: radial-gradient(circle, #D4AF37 0%, transparent 70%);
+                border-radius: 50%;
+                transform: translate(-50%, -50%);
+                animation: burst 0.6s ease-out forwards;
+                pointer-events: none;
+            `;
+            mainFrame.appendChild(burst);
+            
+            setTimeout(() => burst.remove(), 600);
+        });
+
+        // Add burst animation dynamically
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes burst {
+                to {
+                    width: 200px;
+                    height: 200px;
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Verse Section Reveal
+        const verseSection = document.getElementById('verseSection');
+        verseSection.addEventListener('click', () => {
+            verseSection.classList.toggle('revealed');
+        });
+
+        // Memory Cards
+        document.querySelectorAll('.memory-card').forEach(card => {
+            card.addEventListener('click', () => {
+                card.classList.toggle('revealed');
+            });
+            
+            card.addEventListener('mouseenter', () => {
+                if (!card.classList.contains('revealed')) {
+                    card.style.transform = 'translateY(-5px)';
+                }
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = '';
+            });
+        });
+
+        // Heart Interaction
+        const heartContainer = document.getElementById('heartContainer');
+        heartContainer.addEventListener('click', () => {
+            heartContainer.classList.add('clicked');
+            createHeartBurst();
+            setTimeout(() => {
+                heartContainer.classList.remove('clicked');
+            }, 2000);
+        });
+
+        function createHeartBurst() {
+            const colors = ['#8B2635', '#D4AF37', '#0D7377', '#C65D3B'];
+            for (let i = 0; i < 20; i++) {
+                const heart = document.createElement('div');
+                heart.innerHTML = '❤';
+                heart.style.cssText = `
+                    position: fixed;
+                    left: ${window.innerWidth / 2}px;
+                    top: ${window.innerHeight - 100}px;
+                    color: ${colors[Math.floor(Math.random() * colors.length)]};
+                    font-size: ${Math.random() * 20 + 10}px;
+                    pointer-events: none;
+                    z-index: 1000;
+                    animation: floatUp ${Math.random() * 2 + 1}s ease-out forwards;
+                `;
+                document.body.appendChild(heart);
+                
+                setTimeout(() => heart.remove(), 3000);
+            }
+        }
+
+        // Add floatUp animation
+        const floatStyle = document.createElement('style');
+        floatStyle.textContent = `
+            @keyframes floatUp {
+                to {
+                    transform: translateY(-100vh) translateX(${(Math.random() - 0.5) * 200}px);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(floatStyle);
+
+        // Secret Trigger
+        const secretTrigger = document.getElementById('secretTrigger');
+        const secretMessage = document.getElementById('secretMessage');
+        
+        secretTrigger.addEventListener('click', () => {
+            secretMessage.classList.toggle('visible');
+            secretTrigger.style.transform = secretMessage.classList.contains('visible') 
+                ? 'scale(1.1) rotate(45deg)' 
+                : '';
+        });
+
+        // Close secret message when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!secretTrigger.contains(e.target) && !secretMessage.contains(e.target)) {
+                secretMessage.classList.remove('visible');
+                secretTrigger.style.transform = '';
+            }
+        });
+
+        // Date Badge Interaction
+        const dateBadge = document.getElementById('dateBadge');
+        dateBadge.addEventListener('click', () => {
+            dateBadge.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                dateBadge.style.transform = '';
+                alert('🌙 Islamic Date: 12 Sha\'ban 1447 AH\n📅 Gregorian Date: March 5, 2026\n\nMay this blessed month bring you peace and joy!');
+            }, 150);
+        });
+
+        // Confetti System
+        function initConfetti() {
+            const canvas = document.getElementById('confetti-canvas');
+            const ctx = canvas.getContext('2d');
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            const particles = [];
+            const colors = ['#8B2635', '#D4AF37', '#0D7377', '#C65D3B', '#1E3A5F'];
+
+            class Particle {
+                constructor() {
+                    this.x = Math.random() * canvas.width;
+                    this.y = -10;
+                    this.size = Math.random() * 8 + 4;
+                    this.speedY = Math.random() * 3 + 2;
+                    this.speedX = Math.random() * 2 - 1;
+                    this.color = colors[Math.floor(Math.random() * colors.length)];
+                    this.rotation = Math.random() * 360;
+                    this.rotationSpeed = Math.random() * 4 - 2;
+                    this.opacity = 1;
+                }
+
+                update() {
+                    this.y += this.speedY;
+                    this.x += this.speedX;
+                    this.rotation += this.rotationSpeed;
+                    this.opacity -= 0.005;
+                }
+
+                draw() {
+                    ctx.save();
+                    ctx.translate(this.x, this.y);
+                    ctx.rotate(this.rotation * Math.PI / 180);
+                    ctx.globalAlpha = this.opacity;
+                    ctx.fillStyle = this.color;
+                    
+                    // Draw geometric shape (diamond)
+                    ctx.beginPath();
+                    ctx.moveTo(0, -this.size);
+                    ctx.lineTo(this.size, 0);
+                    ctx.lineTo(0, this.size);
+                    ctx.lineTo(-this.size, 0);
+                    ctx.closePath();
+                    ctx.fill();
+                    
+                    ctx.restore();
+                }
+            }
+
+            // Create initial burst
+            for (let i = 0; i < 50; i++) {
+                setTimeout(() => {
+                    particles.push(new Particle());
+                }, i * 30);
+            }
+
+            // Continue with occasional particles
+            setInterval(() => {
+                if (particles.length < 100 && Math.random() > 0.7) {
+                    particles.push(new Particle());
+                }
+            }, 500);
+
+            function animate() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                
+                for (let i = particles.length - 1; i >= 0; i--) {
+                    const p = particles[i];
+                    p.update();
+                    p.draw();
+                    
+                    if (p.y > canvas.height || p.opacity <= 0) {
+                        particles.splice(i, 1);
+                    }
+                }
+                
+                requestAnimationFrame(animate);
+            }
+
+            animate();
+
+            // Handle resize
+            window.addEventListener('resize', () => {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            });
+        }
+
+        // Parallax effect for floating elements
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            document.querySelectorAll('.floating-element').forEach((el, index) => {
+                const speed = 0.5 + (index * 0.2);
+                el.style.transform = `translateY(${scrolled * speed}px) rotate(${scrolled * 0.1}deg)`;
+            });
+        });
+
+        // Keyboard Easter Egg
+        let keySequence = [];
+        const targetSequence = ['t', 'a', 'h', 'i'];
+        
+        document.addEventListener('keydown', (e) => {
+            keySequence.push(e.key.toLowerCase());
+            if (keySequence.length > 4) keySequence.shift();
+            
+            if (keySequence.join('') === targetSequence.join('')) {
+                document.body.style.filter = 'hue-rotate(180deg)';
+                setTimeout(() => {
+                    document.body.style.filter = '';
+                    alert('🎉 Secret code activated! You found the Tahi Easter egg! 🌟');
+                }, 500);
+            }
+        });
+
+        // Smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
